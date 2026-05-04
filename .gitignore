@@ -1,0 +1,14 @@
+# Environment & Secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Reports output
+reports/
+
+# IDE
+.vscode/
+.idea/

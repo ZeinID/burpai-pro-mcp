@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "BurpAIPro": {
+      "command": "python",
+      "args": [
+        "C:\\Users\\Ohan\\.gemini\\antigravity\\scratch\\burpai-pro-mcp\\server.py",
+        "--transport",
+        "stdio"
+      ],
+      "env": {}
+    }
+  }
+}
