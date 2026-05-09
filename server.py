@@ -5,7 +5,7 @@ Tools are organized into categories: Proxy, Scanner, Intruder, Recon, Auth,
 Payload Generation, HTTP Requests, Reporting, and Encoding/Utility.
 """
 import sys
-from typing import Optional, List, Dict
+from typing import Optional
 from mcp.server.fastmcp import FastMCP
 from config import MCP_SERVER_NAME, MCP_HOST, MCP_PORT
 
@@ -123,7 +123,7 @@ async def fuzz_parameter(
 async def fuzz_endpoint(
     base_url: str,
     wordlist: list[str],
-    extensions: list[str] = None,
+    extensions: Optional[list[str]] = None,
 ) -> str:
     """[INTRUDER] Discover hidden paths/files by fuzzing URL paths with a wordlist. Optionally append file extensions."""
     result = await intruder.fuzz_endpoint(base_url, wordlist, extensions)
@@ -343,7 +343,8 @@ if __name__ == "__main__":
         mcp.run(transport=args.transport)
     except Exception as e:
         import traceback
-        log_path = "C:\\Users\\Ohan\\.gemini\\antigravity\\scratch\\burpai-pro-mcp\\crash.log"
+        import os
+        log_path = os.path.join(os.path.dirname(__file__), "crash.log")
         with open(log_path, "w") as f:
             f.write("CRASH DETECTED:\n")
             traceback.print_exc(file=f)

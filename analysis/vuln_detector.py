@@ -1,6 +1,6 @@
 """Enhanced vulnerability detection engine with pattern matching for multiple vuln classes."""
 import re
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Optional
 from models.vulnerability import VulnType, SeverityLevel
 
 

@@ -25,16 +25,19 @@ async def send_http_request(
         proxy_through_burp: If True, routes through Burp proxy (127.0.0.1:8080)
         timeout: Request timeout in seconds
     """
-    proxies = None
+    mounts = None
     if proxy_through_burp:
-        proxies = {"http://": "http://127.0.0.1:8080", "https://": "http://127.0.0.1:8080"}
+        mounts = {
+            "http://": httpx.AsyncHTTPTransport(proxy="http://127.0.0.1:8080"),
+            "https://": httpx.AsyncHTTPTransport(proxy="http://127.0.0.1:8080"),
+        }
 
     start = time.time()
     async with httpx.AsyncClient(
         timeout=timeout,
         verify=False,
         follow_redirects=follow_redirects,
-        proxies=proxies,
+        mounts=mounts,
     ) as client:
         try:
             res = await client.request(method, url, headers=headers or {}, content=body)
