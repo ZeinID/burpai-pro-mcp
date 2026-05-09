@@ -4,7 +4,7 @@ from burp_client import BurpClient
 
 async def get_proxy_history(limit: int = 10) -> List[Dict[str, Any]]:
     """Retrieve the latest N requests from Burp's proxy history."""
-    client = BurpClient()
+    client = BurpClient.get_instance()
     history = await client.get_proxy_history()
     return history[-limit:] if history else []
 
