@@ -1,7 +1,7 @@
 from typing import List, Optional
 from datetime import datetime
 from pydantic import BaseModel, Field
-from .vulnerability import Vulnerability, SeverityLevel
+from .vulnerability import Vulnerability
 
 class FindingReport(BaseModel):
     """Detailed report for a single finding."""

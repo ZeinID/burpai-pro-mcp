@@ -5,7 +5,7 @@ import hashlib
 import html
 import binascii
 import jwt
-from typing import Dict, Any, List
+from typing import Dict, Any
 
 
 def encode_decode(text: str, format: str, operation: str = "encode") -> str:

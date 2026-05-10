@@ -197,18 +197,3 @@ async def parameter_mining(
     }
 
 
-COMMON_PATHS = [
-    "admin", "login", "dashboard", "api", "api/v1", "api/v2",
-    "swagger", "swagger-ui", "docs", "graphql", "graphiql",
-    ".env", "config", "config.php", "wp-admin", "wp-login.php",
-    "robots.txt", "sitemap.xml", ".git/HEAD", ".gitignore",
-    "backup", "db", "database", "debug", "test", "staging",
-    "console", "manager", "phpmyadmin", "adminer",
-    "server-status", "server-info", ".htaccess", ".htpasswd",
-    "web.config", "crossdomain.xml", "clientaccesspolicy.xml",
-    "elmah.axd", "trace.axd", "info.php", "phpinfo.php",
-    "actuator", "actuator/health", "actuator/env",
-    "_debug_toolbar", "__debug__",
-    ".well-known/security.txt", "security.txt",
-    ".DS_Store", "Thumbs.db", "WEB-INF/web.xml",
-]

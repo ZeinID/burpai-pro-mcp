@@ -1,8 +1,7 @@
-import json
 import os
 from typing import Dict, Any, List
 from models.vulnerability import Vulnerability, SeverityLevel
-from models.report import FindingReport, PentestSummary
+from models.report import PentestSummary
 from config import REPORT_OUTPUT_DIR
 
 def generate_finding_report(vuln_data: Dict[str, Any]) -> str:
@@ -12,9 +11,8 @@ def generate_finding_report(vuln_data: Dict[str, Any]) -> str:
     except Exception as e:
         return f"Error creating vulnerability report: {str(e)}"
 
-    report = FindingReport(finding=vuln)
-    
     md_content = f"# {vuln.title}\n\n"
+
     md_content += f"**Severity:** {vuln.severity.value}\n"
     md_content += f"**Type:** {vuln.type.value}\n"
     if vuln.cvss_score:

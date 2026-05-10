@@ -1,8 +1,8 @@
 """Enhanced reconnaissance tools with tech fingerprinting, URL extraction, and robots.txt parsing."""
 import re
 import httpx
-from typing import List, Dict, Any, Optional
-from urllib.parse import urlparse, urljoin
+from typing import List, Dict, Any
+from urllib.parse import urljoin
 from burp_client import BurpClient
 
 

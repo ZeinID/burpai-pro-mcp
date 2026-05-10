@@ -23,11 +23,8 @@ BURP_API_KEY = os.getenv("BURP_API_KEY", "")  # Set via .env or env var, JANGAN 
 
 # MCP Server Configuration
 MCP_SERVER_NAME = "BurpAI Pro"
-MCP_HOST = os.getenv("MCP_HOST", "127.0.0.1")
-MCP_PORT = int(os.getenv("MCP_PORT", "9876"))
 
-# Logging & Reporting
-LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
+# Reporting
 REPORT_OUTPUT_DIR = os.getenv("REPORT_OUTPUT_DIR", "./reports")
 
 # Ensure report directory exists

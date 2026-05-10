@@ -1,7 +1,7 @@
 """Enhanced HTTP request tools with proxy support, custom headers, and smarter comparison."""
 import httpx
 import time
-from typing import Dict, Any, Optional, List
+from typing import Dict, Any, Optional
 from burp_client import BurpClient
 
 

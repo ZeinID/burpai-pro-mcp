@@ -1,5 +1,5 @@
 from typing import List, Dict, Any
-from urllib.parse import urlparse, parse_qs
+from urllib.parse import parse_qs
 from burp_client import BurpClient
 
 async def get_proxy_history(limit: int = 10) -> List[Dict[str, Any]]:
@@ -143,7 +143,7 @@ def analyze_response(response_data: str) -> Dict[str, Any]:
     
     # Content type analysis
     content_type = headers.get("Content-Type", "unknown")
-    content_length = headers.get("Content-Length", str(len(body)))
+
     
     return {
         "http_version": http_version,

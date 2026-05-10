@@ -7,7 +7,7 @@ Payload Generation, HTTP Requests, Reporting, and Encoding/Utility.
 import sys
 from typing import Optional
 from mcp.server.fastmcp import FastMCP
-from config import MCP_SERVER_NAME, MCP_HOST, MCP_PORT
+from config import MCP_SERVER_NAME
 
 # Import tool modules
 import tools.proxy_tools as proxy
